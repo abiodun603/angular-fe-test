@@ -1,8 +1,27 @@
-# TaskManagerTestAg
+# Task Manager Application
+
+A task management application designed to help users organize and prioritize their tasks effectively. The app allows users to categorize tasks into different statuses (To Do, In Progress, Completed) and provides filtering and task management features.
+
+## Features
+
+- **Task Categorization:** Organize tasks by status (To Do, In Progress, Completed).
+- Dynamic Filtering: Filter tasks based on priority and status.
+- Task Actions: Create, update, and delete tasks seamlessly.
+- Visual Indicators: Different icons and styles for task statuses and priorities.
+- Responsive Design: User-friendly interface suitable for various devices.
+
+## Technologies Used
+
+- **Frontend Framework:** Angular
+- Icons: Lucide Angular
+- Styling: SCSS and Angular Material
+- Routing: Angular Router
+
+### TaskManagerTestAg
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.7.
 
-## Development server
+#### Development server
 
 To start a local development server, run:
 
@@ -11,10 +30,6 @@ ng serve
 ```
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
 
 ```bash
 ng generate component component-name
@@ -39,21 +54,3 @@ This will compile your project and store the build artifacts in the `dist/` dire
 ## Running unit tests
 
 To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

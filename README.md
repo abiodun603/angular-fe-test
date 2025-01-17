@@ -17,11 +17,35 @@ A task management application designed to help users organize and prioritize the
 - Styling: SCSS and Angular Material
 - Routing: Angular Router
 
-### TaskManagerTestAg
+### Project Structure
+
+src/
+ app/
+    components/
+      task-board/
+          task-board.component.ts
+          task-board.component.html
+          task-board.component.scss
+      task-list/
+        task-list.component.ts
+        task-list.component.html
+        task-list.component.scss
+      filter/
+        filter.component.ts
+        filter.component.html
+        filter.component.scss
+    app.component.ts
+    app.component.html
+    app.module.ts
+assets/
+environments/
+styles/
+
+#### TaskManagerTestAg
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.7.
 
-#### Development server
+##### Development server
 
 To start a local development server, run:
 
@@ -41,7 +65,7 @@ For a complete list of available schematics (such as `components`, `directives`,
 ng generate --help
 ```
 
-## Building
+###### Building
 
 To build the project run:
 
@@ -51,6 +75,6 @@ ng build
 
 This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
-## Running unit tests
+###### Running unit tests
 
 To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:

@@ -1,0 +1,67 @@
+<div class="task__list-container">
+  <div *ngFor="let group of taskGroups">
+    <div *ngIf="group.tasks.length > 0" class="task__group-container">
+      <div class="task__status-container">
+        <lucide-angular
+          [img]="getIcon(group.status)"
+          [ngClass]="{
+            'todo-icon': group.status === 'To Do',
+            'in-progress-icon': group.status === 'In Progress',
+            'completed-icon': group.status === 'Completed'
+          }"
+          class="my-icon"
+        >
+        </lucide-angular>
+        <h3 class="task__list-status">
+          {{ group.status }}
+          <span class="task-count">{{ group.tasks.length }}</span>
+        </h3>
+      </div>
+      <div *ngFor="let task of group.tasks" class="task__item-container">
+        <div class="task__title-container">
+          <!-- <p class="task-priority">{{ task.priority }}</p> -->
+          <lucide-angular
+            [img]="getPriority(task.priority)"
+            class=""
+            class="task__priority-icon"
+          >
+          </lucide-angular>
+          <div>
+            <h4 class="task__title-h1">{{ task.title }}</h4>
+            <p class="task__desc-p">{{ task.description }}</p>
+          </div>
+        </div>
+
+        <p class="task__item-date">Due: {{ task.dueDate | date }}</p>
+
+        <div class="task__button-container">
+          <button class="edit-button" mat-button (click)="openTaskDialog(task)">
+            <lucide-angular
+              [img]="Edit"
+              size="18"
+              strokeWidth="3"
+              class="my-icon"
+            ></lucide-angular>
+          </button>
+          <button
+            class="delete-button"
+            mat-button
+            color="warn"
+            (click)="deleteTask(task.id)"
+          >
+            <lucide-angular
+              [img]="Trash"
+              size="18"
+              strokeWidth="3"
+              class="my-icon"
+            ></lucide-angular>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Display "No tasks available" only if all groups are empty -->
+  </div>
+  <div *ngIf="areAllGroupsEmpty" class="no__tasks-message">
+    <p>No tasks available.</p>
+  </div>
+</div>

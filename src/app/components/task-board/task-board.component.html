@@ -1,0 +1,13 @@
+<app-filter
+  [selectedStatus]="selectedStatus()"
+  [selectedPriority]="selectedPriority()"
+  (statusChange)="onStatusChange($event)"
+  (priorityChange)="onPriorityChange($event)"
+  [openTaskDialog]="openTaskDialog.bind(this)"
+
+></app-filter>
+<app-task-list
+  [taskGroups]="taskGroups"
+  [openTaskDialog]="openTaskDialog.bind(this)"
+  [deleteTask]="deleteTask.bind(this)"
+></app-task-list>

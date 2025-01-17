@@ -1,16 +1,24 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { TaskBoardComponent } from './components/task-board/task-board.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  template: `
-    <h1>Welcome to {{title}}!</h1>
+  imports: [RouterOutlet, TaskBoardComponent],
+  templateUrl: './app.component.html',
+  styles: [
+    `
+      .container {
+        width: 1000px;
+        margin: 50px auto;
+      }
 
-    <router-outlet />
-  `,
-  styles: [],
+      h1 {
+        margin-bottom: 1.5rem;
+      }
+    `,
+  ],
 })
 export class AppComponent {
-  title = 'task-manager-test-ag';
+  title = 'Task Manager';
 }

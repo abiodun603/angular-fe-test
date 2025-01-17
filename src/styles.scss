@@ -1,1 +1,63 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #ffffff;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="search"],
+textarea {
+  height: 48px;
+  font-size: 14px;
+  margin: 8px 0;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  color: #333;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+textarea {
+  height: 20px !important;
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+input[type="date"] {
+  height: 20px !important;
+  padding: 10px;
+  font-size: 14px;
+  height: 48px;
+  font-size: 14px;
+  margin: 8px 0;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #333;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
